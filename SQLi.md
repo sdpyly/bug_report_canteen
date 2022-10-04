@@ -1,4 +1,4 @@
-# Canteen Management System Project by mayuri_k has SQL injection
+# Canteen Management System Project v1.0 by mayuri_k has SQL injection
 BUG_Author: YorkLee
 
 Login account: mayuri.infospace@gmail.com/rootadmin
